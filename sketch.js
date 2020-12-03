@@ -23,6 +23,9 @@ function setup() {
 
   var dogl = database.ref('dog/food');
   dogl.on("value", readPos, error);
+  database.ref('dog').set({
+    'food': foodAmt
+  });
   
 }
 
